@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (DSDataProcess*)sharedDataProcess;
 
 - (void)test;
+
 #pragma mark - Base
 
 

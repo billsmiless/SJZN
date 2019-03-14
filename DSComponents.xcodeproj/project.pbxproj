@@ -28,6 +28,10 @@
 		9A54A933222E5878008BAD74 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A92D222E5878008BAD74 /* AFURLSessionManager.m */; };
 		9A54A93F222E5FD2008BAD74 /* DSNetworkingCancelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A93C222E5FD2008BAD74 /* DSNetworkingCancelRequest.m */; };
 		9A54A940222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A93E222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m */; };
+		9A54A99C222F9E19008BAD74 /* DSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A99B222F9E19008BAD74 /* DSNavigationController.m */; };
+		9A94234D2239F3800011AF8B /* DSContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A94234C2239F3800011AF8B /* DSContentButton.m */; };
+		9AAF6577223A00950096137F /* DSContentButtonCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6576223A00950096137F /* DSContentButtonCtrl.m */; };
+		9AAF6579223A02050096137F /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF6578223A02050096137F /* 06.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,13 @@
 		9A54A93C222E5FD2008BAD74 /* DSNetworkingCancelRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNetworkingCancelRequest.m; sourceTree = "<group>"; };
 		9A54A93D222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DSNetworkingAutoCancel.h"; sourceTree = "<group>"; };
 		9A54A93E222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DSNetworkingAutoCancel.m"; sourceTree = "<group>"; };
+		9A54A99A222F9E19008BAD74 /* DSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSNavigationController.h; sourceTree = "<group>"; };
+		9A54A99B222F9E19008BAD74 /* DSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSNavigationController.m; sourceTree = "<group>"; };
+		9A94234B2239F3800011AF8B /* DSContentButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSContentButton.h; sourceTree = "<group>"; };
+		9A94234C2239F3800011AF8B /* DSContentButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSContentButton.m; sourceTree = "<group>"; };
+		9AAF6575223A00950096137F /* DSContentButtonCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSContentButtonCtrl.h; sourceTree = "<group>"; };
+		9AAF6576223A00950096137F /* DSContentButtonCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSContentButtonCtrl.m; sourceTree = "<group>"; };
+		9AAF6578223A02050096137F /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
 		9AC07F872215045100895722 /* DSComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +112,8 @@
 		9A54A901222E48D5008BAD74 /* DSComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9A94234A2239F36E0011AF8B /* DSContentButton */,
+				9A54A999222F9DFC008BAD74 /* DSNavigationController */,
 				9A54A903222E4E93008BAD74 /* DSDataProcess */,
 			);
 			path = DSComponents;
@@ -185,11 +198,48 @@
 			path = DSCancelRequest;
 			sourceTree = "<group>";
 		};
+		9A54A999222F9DFC008BAD74 /* DSNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				9A54A99A222F9E19008BAD74 /* DSNavigationController.h */,
+				9A54A99B222F9E19008BAD74 /* DSNavigationController.m */,
+			);
+			path = DSNavigationController;
+			sourceTree = "<group>";
+		};
+		9A94234A2239F36E0011AF8B /* DSContentButton */ = {
+			isa = PBXGroup;
+			children = (
+				9A94234B2239F3800011AF8B /* DSContentButton.h */,
+				9A94234C2239F3800011AF8B /* DSContentButton.m */,
+			);
+			path = DSContentButton;
+			sourceTree = "<group>";
+		};
+		9AAF6573223A00560096137F /* DSComponentDemoCtrls */ = {
+			isa = PBXGroup;
+			children = (
+				9AAF6574223A00770096137F /* DSContentButtonDemo */,
+			);
+			path = DSComponentDemoCtrls;
+			sourceTree = "<group>";
+		};
+		9AAF6574223A00770096137F /* DSContentButtonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9AAF6578223A02050096137F /* 06.png */,
+				9AAF6575223A00950096137F /* DSContentButtonCtrl.h */,
+				9AAF6576223A00950096137F /* DSContentButtonCtrl.m */,
+			);
+			path = DSContentButtonDemo;
+			sourceTree = "<group>";
+		};
 		9AC07F7E2215045100895722 = {
 			isa = PBXGroup;
 			children = (
 				9A54A8FE222E48D0008BAD74 /* DSComponentViewController.h */,
 				9A54A8FF222E48D0008BAD74 /* DSComponentViewController.m */,
+				9AAF6573223A00560096137F /* DSComponentDemoCtrls */,
 				9A54A901222E48D5008BAD74 /* DSComponents */,
 				9A54A8F1222E48C9008BAD74 /* Resources */,
 				9AC07F882215045100895722 /* Products */,
@@ -264,6 +314,7 @@
 				9A54A8FA222E48C9008BAD74 /* Assets.xcassets in Resources */,
 				9A54A8FB222E48C9008BAD74 /* LaunchScreen.storyboard in Resources */,
 				9A54A8FC222E48C9008BAD74 /* Info.plist in Resources */,
+				9AAF6579223A02050096137F /* 06.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +331,13 @@
 				9A54A917222E558A008BAD74 /* DSURLResponse.m in Sources */,
 				9A54A932222E5878008BAD74 /* AFURLResponseSerialization.m in Sources */,
 				9A54A914222E5452008BAD74 /* DSApiProxy.m in Sources */,
+				9A94234D2239F3800011AF8B /* DSContentButton.m in Sources */,
 				9A54A931222E5878008BAD74 /* AFURLRequestSerialization.m in Sources */,
 				9A54A92E222E5878008BAD74 /* AFHTTPSessionManager.m in Sources */,
 				9A54A911222E5359008BAD74 /* DSApiManager.m in Sources */,
 				9A54A933222E5878008BAD74 /* AFURLSessionManager.m in Sources */,
+				9AAF6577223A00950096137F /* DSContentButtonCtrl.m in Sources */,
+				9A54A99C222F9E19008BAD74 /* DSNavigationController.m in Sources */,
 				9A54A90B222E4FA4008BAD74 /* DSServerUrlManager.m in Sources */,
 				9A54A93F222E5FD2008BAD74 /* DSNetworkingCancelRequest.m in Sources */,
 				9A54A91D222E5675008BAD74 /* NSObject+DSNetworking.m in Sources */,
