@@ -100,6 +100,7 @@
     if( !_contentView ){
         _contentView = [UIView new];
         _contentView.frame = _contentRect;
+        _contentView.userInteractionEnabled = NO; 
         [self addSubview:_contentView];
         
         if( _needCornerRadius ){
