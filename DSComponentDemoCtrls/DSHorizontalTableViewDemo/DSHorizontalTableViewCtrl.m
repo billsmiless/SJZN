@@ -30,7 +30,7 @@
     [htView reloadData];
 }
 
-#pragma mark - TableView
+#pragma mark - TableViewDelegate
 - (void)horizontalTableView:(DSHorizontalTableView *)htView setupCell:(UICollectionViewCell *)cell atIndex:(NSInteger)index{
     UICollectionViewCell *lbl = (UICollectionViewCell*)cell;
     lbl.backgroundColor = [UIColor colorWithRed:rand()%255/255.0 green:rand()%255/255.0 blue:rand()%255/255.0 alpha:1];

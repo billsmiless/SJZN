@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param borderColor 边框颜色
  @return 按钮
  */
-- (id)initWithCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor*)borderColor;
+- (id)initWithCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor* _Nullable)borderColor;
 
 //相对于内容视图的标题和图片的Frame
 @property (nonatomic, assign) CGRect titleRect;  //默认CGRectZero

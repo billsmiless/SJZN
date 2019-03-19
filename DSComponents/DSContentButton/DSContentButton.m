@@ -18,7 +18,7 @@
 
 @synthesize contentView = _contentView;
 
-- (id)initWithCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor*)borderColor{
+- (id)initWithCornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor * _Nullable)borderColor{
     self = [super init];
     if( self ){
         _needCornerRadius = YES;
