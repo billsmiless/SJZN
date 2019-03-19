@@ -30,6 +30,9 @@
 		9A54A940222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A93E222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m */; };
 		9A54A99C222F9E19008BAD74 /* DSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A99B222F9E19008BAD74 /* DSNavigationController.m */; };
 		9A94234D2239F3800011AF8B /* DSContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A94234C2239F3800011AF8B /* DSContentButton.m */; };
+		9AAB7FE022407A4C00B1DA40 /* DSHorizontalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB7FDF22407A4C00B1DA40 /* DSHorizontalTableView.m */; };
+		9AAB7FE72240901300B1DA40 /* DSHorizontalTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB7FE62240901300B1DA40 /* DSHorizontalTableViewCtrl.m */; };
+		9AAB7FF22240CBC600B1DA40 /* DSHorizontalTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB7FF12240CBC600B1DA40 /* DSHorizontalTableLayout.m */; };
 		9AAF6577223A00950096137F /* DSContentButtonCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF6576223A00950096137F /* DSContentButtonCtrl.m */; };
 		9AAF6579223A02050096137F /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF6578223A02050096137F /* 06.png */; };
 /* End PBXBuildFile section */
@@ -79,6 +82,12 @@
 		9A54A99B222F9E19008BAD74 /* DSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSNavigationController.m; sourceTree = "<group>"; };
 		9A94234B2239F3800011AF8B /* DSContentButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSContentButton.h; sourceTree = "<group>"; };
 		9A94234C2239F3800011AF8B /* DSContentButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSContentButton.m; sourceTree = "<group>"; };
+		9AAB7FDE22407A4C00B1DA40 /* DSHorizontalTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSHorizontalTableView.h; sourceTree = "<group>"; };
+		9AAB7FDF22407A4C00B1DA40 /* DSHorizontalTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSHorizontalTableView.m; sourceTree = "<group>"; };
+		9AAB7FE52240901300B1DA40 /* DSHorizontalTableViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSHorizontalTableViewCtrl.h; sourceTree = "<group>"; };
+		9AAB7FE62240901300B1DA40 /* DSHorizontalTableViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSHorizontalTableViewCtrl.m; sourceTree = "<group>"; };
+		9AAB7FF02240CBC600B1DA40 /* DSHorizontalTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHorizontalTableLayout.h; sourceTree = "<group>"; };
+		9AAB7FF12240CBC600B1DA40 /* DSHorizontalTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHorizontalTableLayout.m; sourceTree = "<group>"; };
 		9AAF6575223A00950096137F /* DSContentButtonCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSContentButtonCtrl.h; sourceTree = "<group>"; };
 		9AAF6576223A00950096137F /* DSContentButtonCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSContentButtonCtrl.m; sourceTree = "<group>"; };
 		9AAF6578223A02050096137F /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
@@ -112,6 +121,7 @@
 		9A54A901222E48D5008BAD74 /* DSComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9AAB7FDD22407A1300B1DA40 /* DSHorizontalTableView */,
 				9A94234A2239F36E0011AF8B /* DSContentButton */,
 				9A54A999222F9DFC008BAD74 /* DSNavigationController */,
 				9A54A903222E4E93008BAD74 /* DSDataProcess */,
@@ -216,9 +226,38 @@
 			path = DSContentButton;
 			sourceTree = "<group>";
 		};
+		9AAB7FDD22407A1300B1DA40 /* DSHorizontalTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB7FDE22407A4C00B1DA40 /* DSHorizontalTableView.h */,
+				9AAB7FDF22407A4C00B1DA40 /* DSHorizontalTableView.m */,
+				9AAB7FEF2240CBC600B1DA40 /* Layout */,
+			);
+			path = DSHorizontalTableView;
+			sourceTree = "<group>";
+		};
+		9AAB7FE122408FE900B1DA40 /* DSHorizontalTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB7FE52240901300B1DA40 /* DSHorizontalTableViewCtrl.h */,
+				9AAB7FE62240901300B1DA40 /* DSHorizontalTableViewCtrl.m */,
+			);
+			path = DSHorizontalTableViewDemo;
+			sourceTree = "<group>";
+		};
+		9AAB7FEF2240CBC600B1DA40 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB7FF02240CBC600B1DA40 /* DSHorizontalTableLayout.h */,
+				9AAB7FF12240CBC600B1DA40 /* DSHorizontalTableLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		9AAF6573223A00560096137F /* DSComponentDemoCtrls */ = {
 			isa = PBXGroup;
 			children = (
+				9AAB7FE122408FE900B1DA40 /* DSHorizontalTableViewDemo */,
 				9AAF6574223A00770096137F /* DSContentButtonDemo */,
 			);
 			path = DSComponentDemoCtrls;
@@ -338,9 +377,12 @@
 				9A54A933222E5878008BAD74 /* AFURLSessionManager.m in Sources */,
 				9AAF6577223A00950096137F /* DSContentButtonCtrl.m in Sources */,
 				9A54A99C222F9E19008BAD74 /* DSNavigationController.m in Sources */,
+				9AAB7FE72240901300B1DA40 /* DSHorizontalTableViewCtrl.m in Sources */,
+				9AAB7FF22240CBC600B1DA40 /* DSHorizontalTableLayout.m in Sources */,
 				9A54A90B222E4FA4008BAD74 /* DSServerUrlManager.m in Sources */,
 				9A54A93F222E5FD2008BAD74 /* DSNetworkingCancelRequest.m in Sources */,
 				9A54A91D222E5675008BAD74 /* NSObject+DSNetworking.m in Sources */,
+				9AAB7FE022407A4C00B1DA40 /* DSHorizontalTableView.m in Sources */,
 				9A54A940222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m in Sources */,
 				9A54A930222E5878008BAD74 /* AFSecurityPolicy.m in Sources */,
 				9A54A8F9222E48C9008BAD74 /* AppDelegate.m in Sources */,

@@ -10,6 +10,7 @@
 #import "DSDataProcess.h"
 #import "DSContentButton.h"
 #import "DSContentButtonCtrl.h"
+#import "DSHorizontalTableViewCtrl.h"
 
 @interface DSComponentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -39,7 +40,6 @@
 - (void)handleBtn{
     
 }
-
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -73,6 +73,11 @@
         DSContentButtonCtrl *bc = [[DSContentButtonCtrl alloc] init];
         bc.title = @"测试按钮";
         [self.navigationController pushViewController:bc animated:YES];
+    }else if( indexPath.row == 2 ){
+        //横向列表
+        DSHorizontalTableViewCtrl *tc = [DSHorizontalTableViewCtrl new];
+        tc.title = @"横向列表";
+        [self.navigationController pushViewController:tc animated:YES];
     }
 }
 
