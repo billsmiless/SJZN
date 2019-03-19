@@ -15,25 +15,20 @@
 @property (nonatomic, assign) CGSize cellSize;
 @end
 
-@interface abccell : UICollectionViewCell
-
-@end
-
-@implementation abccell
-
-
-
-@end
-
 @implementation DSHorizontalTableView{
     NSString *_cellReuseIdentify;
     Class _cellClass;
 }
 
 - (id)initWithCellClass:(Class)cellClass cellSize:(CGSize)cellSize contentEdgeInsets:(UIEdgeInsets)contentEdgeInsets interCellSpace:(CGFloat)interCellSpace{
+    
+    if( ![[cellClass new] isKindOfClass:[UICollectionViewCell class]] ){
+        NSLog(@"\n-----------------------DSLog-----------------------\n\ninit DSHorizontalTableView failed.\nerror: cellClass not UICollectioinViewCell type.\n%s\n\n-----------------------DSLog-----------------------\n",__func__);
+        return nil;
+    }
+    
     self = [super init];
     if( self ){
-
         _cellClass = cellClass;
         _contentEdgeInsets = contentEdgeInsets;
         _interCellSpace = interCellSpace;
@@ -45,7 +40,7 @@
         
         _cellReuseIdentify = [NSString stringWithFormat:@"cellreuseid%d",rand()%100000+100];
         
-        [self.collectionView registerClass:[abccell class] forCellWithReuseIdentifier:_cellReuseIdentify];
+        [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:_cellReuseIdentify];
     }
     return self;
 }
@@ -58,15 +53,6 @@
     [super layoutSubviews];
     
     self.collectionView.frame = self.bounds;
-}
-
-#pragma mark - UICollectionViewLayout
--  (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return _contentEdgeInsets;
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return _cellSize;
 }
 
 #pragma mark - CollectionViewDataSource
@@ -95,7 +81,8 @@
     if( !_collectionView ){
         UICollectionViewFlowLayout *layout =
         [[DSHorizontalTableLayout alloc] initWithInterCellSpace:_interCellSpace];
-        layout.sectionInset = UIEdgeInsetsMake(0, 15, 0, 0);
+        layout.sectionInset = _contentEdgeInsets;
+        layout.itemSize = _cellSize;
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.delegate = self;

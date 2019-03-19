@@ -21,6 +21,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<DSHorizontalTableViewDelegate> delegate;
 
+/**
+ 创建实例
+
+ @param cellClass 列表的cell的类，必须是UICollectionViewCell的子类
+ @param cellSize cell的大小
+ @param contentEdgeInsets 内容的边距，只有左右有效果，上下无效果
+ @param interCellSpace cell之间的间距
+ @return 实例
+ */
 - (id)initWithCellClass:(Class)cellClass
                cellSize:(CGSize)cellSize
       contentEdgeInsets:(UIEdgeInsets)contentEdgeInsets
@@ -51,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param cell 需要设置的cell实例
  @param index 需要配置的cell的索引
  */
-- (void)horizontalTableView:(DSHorizontalTableView*)htView setupCell:(UIView*)cell atIndex:(NSInteger)index;
+- (void)horizontalTableView:(DSHorizontalTableView*)htView setupCell:(UICollectionViewCell*)cell atIndex:(NSInteger)index;
 
 @end
 

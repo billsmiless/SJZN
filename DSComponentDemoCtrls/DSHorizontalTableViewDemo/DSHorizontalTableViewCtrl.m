@@ -21,7 +21,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    DSHorizontalTableView *htView = [[DSHorizontalTableView alloc] initWithCellClass:[UICollectionViewCell class] cellSize:CGSizeMake(50, 50) contentEdgeInsets:UIEdgeInsetsMake(0, 15, 0, 0) interCellSpace:15];
+    DSHorizontalTableView *htView = [[DSHorizontalTableView alloc] initWithCellClass:[UICollectionViewCell class] cellSize:CGSizeMake(50, 50) contentEdgeInsets:UIEdgeInsetsMake(0, 15, 0, 15) interCellSpace:15];
     htView.frame = CGRectMake(0, 100, self.view.frame.size.width, 60);
     htView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     htView.delegate = self;
@@ -31,13 +31,8 @@
 }
 
 #pragma mark - TableView
-- (void)horizontalTableView:(DSHorizontalTableView *)htView setupCell:(UIView *)cell atIndex:(NSInteger)index{
-    UILabel *lbl = (UILabel*)cell;
-    if( [lbl isKindOfClass:[UILabel class]] ){
-        lbl.text = @(index).stringValue;
-        lbl.textColor = [UIColor redColor];
-    }
-    
+- (void)horizontalTableView:(DSHorizontalTableView *)htView setupCell:(UICollectionViewCell *)cell atIndex:(NSInteger)index{
+    UICollectionViewCell *lbl = (UICollectionViewCell*)cell;
     lbl.backgroundColor = [UIColor colorWithRed:rand()%255/255.0 green:rand()%255/255.0 blue:rand()%255/255.0 alpha:1];
 }
 

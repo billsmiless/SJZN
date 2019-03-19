@@ -32,7 +32,7 @@
 //    _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [self.view addSubview:_tableView];
 
-    _datas = @[@"DSDataProcessDemo",@"DSContentButtonDemo",@"Other"];
+    _datas = @[@"DSDataProcessDemo",@"DSContentButtonDemo",@"DSHorizontalTableView横向列表"];
     
     [_tableView reloadData];
 }
