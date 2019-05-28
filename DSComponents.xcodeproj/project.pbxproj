@@ -29,6 +29,10 @@
 		9A54A93F222E5FD2008BAD74 /* DSNetworkingCancelRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A93C222E5FD2008BAD74 /* DSNetworkingCancelRequest.m */; };
 		9A54A940222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A93E222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m */; };
 		9A54A99C222F9E19008BAD74 /* DSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A54A99B222F9E19008BAD74 /* DSNavigationController.m */; };
+		9A64C38722670B7C004F4630 /* DSWebPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C38622670B7C004F4630 /* DSWebPageViewCtrl.m */; };
+		9A64C38A22670C1E004F4630 /* WKWebView+Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C38922670C1D004F4630 /* WKWebView+Progress.m */; };
+		9A79478D226801A00094229F /* DSSheetSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79478C226801A00094229F /* DSSheetSelectView.m */; };
+		9A79478F226819EC0094229F /* 效果.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A79478E226819EC0094229F /* 效果.png */; };
 		9A94234D2239F3800011AF8B /* DSContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A94234C2239F3800011AF8B /* DSContentButton.m */; };
 		9AAB7FE022407A4C00B1DA40 /* DSHorizontalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB7FDF22407A4C00B1DA40 /* DSHorizontalTableView.m */; };
 		9AAB7FE72240901300B1DA40 /* DSHorizontalTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB7FE62240901300B1DA40 /* DSHorizontalTableViewCtrl.m */; };
@@ -80,6 +84,13 @@
 		9A54A93E222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DSNetworkingAutoCancel.m"; sourceTree = "<group>"; };
 		9A54A99A222F9E19008BAD74 /* DSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSNavigationController.h; sourceTree = "<group>"; };
 		9A54A99B222F9E19008BAD74 /* DSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSNavigationController.m; sourceTree = "<group>"; };
+		9A64C38522670B7C004F4630 /* DSWebPageViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSWebPageViewCtrl.h; sourceTree = "<group>"; };
+		9A64C38622670B7C004F4630 /* DSWebPageViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSWebPageViewCtrl.m; sourceTree = "<group>"; };
+		9A64C38822670C1D004F4630 /* WKWebView+Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+Progress.h"; sourceTree = "<group>"; };
+		9A64C38922670C1D004F4630 /* WKWebView+Progress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Progress.m"; sourceTree = "<group>"; };
+		9A79478B226801A00094229F /* DSSheetSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSSheetSelectView.h; sourceTree = "<group>"; };
+		9A79478C226801A00094229F /* DSSheetSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSSheetSelectView.m; sourceTree = "<group>"; };
+		9A79478E226819EC0094229F /* 效果.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "效果.png"; sourceTree = "<group>"; };
 		9A94234B2239F3800011AF8B /* DSContentButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSContentButton.h; sourceTree = "<group>"; };
 		9A94234C2239F3800011AF8B /* DSContentButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSContentButton.m; sourceTree = "<group>"; };
 		9AAB7FDE22407A4C00B1DA40 /* DSHorizontalTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSHorizontalTableView.h; sourceTree = "<group>"; };
@@ -121,6 +132,8 @@
 		9A54A901222E48D5008BAD74 /* DSComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9A79478A2268018C0094229F /* DSSheetSelectView */,
+				9A64C38422670B6B004F4630 /* DSWebPageViewCtrl */,
 				9AAB7FDD22407A1300B1DA40 /* DSHorizontalTableView */,
 				9A94234A2239F36E0011AF8B /* DSContentButton */,
 				9A54A999222F9DFC008BAD74 /* DSNavigationController */,
@@ -215,6 +228,27 @@
 				9A54A99B222F9E19008BAD74 /* DSNavigationController.m */,
 			);
 			path = DSNavigationController;
+			sourceTree = "<group>";
+		};
+		9A64C38422670B6B004F4630 /* DSWebPageViewCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C38822670C1D004F4630 /* WKWebView+Progress.h */,
+				9A64C38922670C1D004F4630 /* WKWebView+Progress.m */,
+				9A64C38522670B7C004F4630 /* DSWebPageViewCtrl.h */,
+				9A64C38622670B7C004F4630 /* DSWebPageViewCtrl.m */,
+			);
+			path = DSWebPageViewCtrl;
+			sourceTree = "<group>";
+		};
+		9A79478A2268018C0094229F /* DSSheetSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				9A79478E226819EC0094229F /* 效果.png */,
+				9A79478B226801A00094229F /* DSSheetSelectView.h */,
+				9A79478C226801A00094229F /* DSSheetSelectView.m */,
+			);
+			path = DSSheetSelectView;
 			sourceTree = "<group>";
 		};
 		9A94234A2239F36E0011AF8B /* DSContentButton */ = {
@@ -350,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A79478F226819EC0094229F /* 效果.png in Resources */,
 				9A54A8FA222E48C9008BAD74 /* Assets.xcassets in Resources */,
 				9A54A8FB222E48C9008BAD74 /* LaunchScreen.storyboard in Resources */,
 				9A54A8FC222E48C9008BAD74 /* Info.plist in Resources */,
@@ -377,16 +412,19 @@
 				9A54A933222E5878008BAD74 /* AFURLSessionManager.m in Sources */,
 				9AAF6577223A00950096137F /* DSContentButtonCtrl.m in Sources */,
 				9A54A99C222F9E19008BAD74 /* DSNavigationController.m in Sources */,
+				9A79478D226801A00094229F /* DSSheetSelectView.m in Sources */,
 				9AAB7FE72240901300B1DA40 /* DSHorizontalTableViewCtrl.m in Sources */,
 				9AAB7FF22240CBC600B1DA40 /* DSHorizontalTableLayout.m in Sources */,
 				9A54A90B222E4FA4008BAD74 /* DSServerUrlManager.m in Sources */,
 				9A54A93F222E5FD2008BAD74 /* DSNetworkingCancelRequest.m in Sources */,
 				9A54A91D222E5675008BAD74 /* NSObject+DSNetworking.m in Sources */,
 				9AAB7FE022407A4C00B1DA40 /* DSHorizontalTableView.m in Sources */,
+				9A64C38722670B7C004F4630 /* DSWebPageViewCtrl.m in Sources */,
 				9A54A940222E5FD2008BAD74 /* NSObject+DSNetworkingAutoCancel.m in Sources */,
 				9A54A930222E5878008BAD74 /* AFSecurityPolicy.m in Sources */,
 				9A54A8F9222E48C9008BAD74 /* AppDelegate.m in Sources */,
 				9A54A92F222E5878008BAD74 /* AFNetworkReachabilityManager.m in Sources */,
+				9A64C38A22670C1E004F4630 /* WKWebView+Progress.m in Sources */,
 				9A54A91E222E5675008BAD74 /* NSURLRequest+DSNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -11,6 +11,8 @@
 #import "DSContentButton.h"
 #import "DSContentButtonCtrl.h"
 #import "DSHorizontalTableViewCtrl.h"
+#import "DSWebPageViewCtrl.h"
+#import "DSSheetSelectView.h"
 
 @interface DSComponentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -32,7 +34,7 @@
 //    _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [self.view addSubview:_tableView];
 
-    _datas = @[@"DSDataProcessDemo",@"DSContentButtonDemo",@"DSHorizontalTableView横向列表"];
+    _datas = @[@"DSDataProcessDemo",@"DSContentButtonDemo",@"DSHorizontalTableView横向列表",@"WebPageDemo",@"DSSheetSelectViewDemo"];
     
     [_tableView reloadData];
 }
@@ -78,6 +80,19 @@
         DSHorizontalTableViewCtrl *tc = [DSHorizontalTableViewCtrl new];
         tc.title = @"横向列表";
         [self.navigationController pushViewController:tc animated:YES];
+    }else if( indexPath.row == 3 ){
+        //wkwebview网页
+        DSWebPageViewCtrl *pc = [DSWebPageViewCtrl new];
+        pc.pageUrl = @"https://www.jianshu.com";
+        pc.title = @"Web";
+        
+        [self.navigationController pushViewController:pc animated:YES];
+    }else if( indexPath.row == 4 ){
+        //底部弹出选择的sheet
+        NSArray *datas = @[@"一小时",@"一周",@"一个月",@"三个月"];
+        [DSSheetSelectView showWithSelectedIndex:0 datas:datas selectedBlock:^(NSInteger index) {
+            NSLog(@"%s__%ld", __func__ ,(long)index);
+        }];
     }
 }
 

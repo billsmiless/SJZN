@@ -37,6 +37,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, readonly) UIView *contentView;
 
+/**
+ 点击的热区, 热区距离frame上下左右的边距，值为负数，则扩大热区，否则缩小。
+ 默认UIEdgeInsetsZero
+ */
+@property (nonatomic, assign) UIEdgeInsets hitTestEdgeInsets;
+
 @end
 
 NS_ASSUME_NONNULL_END
