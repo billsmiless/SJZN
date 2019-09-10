@@ -23,7 +23,6 @@
     
     //适配ios10
     self.edgesForExtendedLayout = UIRectEdgeAll;
-    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self requedDatas];
 }
@@ -117,7 +116,13 @@
         [_webView addProgress];
         [self.view addSubview:_webView];
         
-        
+        //适配ios11
+        if (@available(iOS 11.0, *)) {
+            _webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } else {
+            
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
     }
     
     return _webView;
