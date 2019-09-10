@@ -21,6 +21,10 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.9];
     
+    //适配ios10
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self requedDatas];
 }
 
@@ -112,6 +116,8 @@
         _webView.navigationDelegate = self;
         [_webView addProgress];
         [self.view addSubview:_webView];
+        
+        
     }
     
     return _webView;
